@@ -10,9 +10,10 @@ class CartService {
     constructor() {
         // ... your implementation here ...
         if (instance) {
-            return this.instance;
+            return instance;
+        } else {
+            instance = this;
         }
-        instance = this;
         this.products = [];
     }
 
